@@ -66,7 +66,20 @@ git push origin <nhánh>
 ```bash
 git pull
 ```
-
+trong thự mục đang làm việc để lấy về (fetch) và trộn (merge) các thay đổi ở remote.
+để trộn một nhánh khác vào nhánh đang hoạt động (vd: master), sử dụng
+```bash
+git merge <nhánh>
+```
+trong cả hai trường hợp, git cố gắng trộn tự động (auto-merge) các thay đổi. Không may, điều này không phải lúc nào cũng làm được và thường dẫn đến xung đột. Trách nhiệm của bạn là trộn các xung đột đó thủ công bằng cách chỉnh sửa các tập tin được hiển thị bởi git. Sau khi thay đổi, bạn phải đánh dấu chúng là đã được trộn (merged) với lệnh
+```bash
+git add <tên-tập-tin>
+```
+trước khi trộn các thay đổi, bạn có thể xem trước chúng bằng các
+```bash
+git diff <nhánh_nguồn> <nhánh_mục_tiêu>
+```
+#9. gắn nhãn (tagging)
 
 
 
