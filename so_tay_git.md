@@ -10,7 +10,7 @@ git init
 # 3. Sao chép (clone) một repository
 - Để clone 1 repository có sẵn ở trên máy cục bộ, bạn hãy sử dụng dòng lệnh sau:
 ```bash
-git clone /đường-dẫn-đến/repository/
+git clone /<đường-dẫn-đến>/repository/
 ```
 - Nếu repository đó ở máy chủ khác thì bạn hãy gõ dòng lệnh sau:
 ```bash
