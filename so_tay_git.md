@@ -84,6 +84,16 @@ trước khi trộn các thay đổi, bạn có thể xem trước chúng bằng
 git diff <nhánh_nguồn> <nhánh_mục_tiêu>
 ```
 # 9. gắn nhãn (tagging)
+Người ta khuyên nên tạo nhãn (tags) khi phát hành phần mềm. đây là khái niệm được biết đến, đã từng có trên SVN.
+Bạn tạo tag mới tên là 1.0.0 bằng cách
+```bash
+git tag 1.0.0 1b2e1d63ff
+```
+chuỗi 1b2e1d63ff là 10 ký tự đầu tiên của mã commit (commit id) mà bạn muốn tham chiếu đến bằng nhãn của bạn. Bạn có thể lấy mã commit với lệnh
+```bash
+git log
+```
+bạn cũng có thể sử dụng ít ký tự hơn từ mã commit, nó chỉ cần phải là duy nhất.
 # 10. git config 
 Config username cho global
 ```bash
