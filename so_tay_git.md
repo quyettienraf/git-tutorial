@@ -61,6 +61,10 @@ một nhánh không có giá trị với các nhánh khác trừ khi bạn đẩ
 ```bash
 git push origin <nhánh>
 ```
+copy một nhánh sang nhánh mới
+```bash
+git checkout -b new_branch old_branch
+```
 # 8. Cập nhật & trộn (update & merge)
 Để cập nhật repository cục bộ của bạn và commit mới nhất, thực thi
 ```bash
@@ -80,42 +84,28 @@ trước khi trộn các thay đổi, bạn có thể xem trước chúng bằng
 git diff <nhánh_nguồn> <nhánh_mục_tiêu>
 ```
 # 9. gắn nhãn (tagging)
-Người ta khuyên nên tạo nhãn (tags) khi phát hành phần mềm. đây là khái niệm được biết đến, đã từng có trên SVN.
-Bạn tạo tag mới tên là 1.0.0 bằng cách
+# 10. git config 
+Config username cho global
 ```bash
-git tag 1.0.0 1b2e1d63ff
+git config --global user.name "your username"
 ```
-chuỗi 1b2e1d63ff là 10 ký tự đầu tiên của mã commit (commit id) mà bạn muốn tham chiếu đến bằng nhãn của bạn. Bạn có thể lấy mã commit với lệnh
+Config user email cho global
 ```bash
-git log
+git config --global user.email "your email"
 ```
-bạn cũng có thể sử dụng ít ký tự hơn từ mã commit, nó chỉ cần phải là duy nhất.
-# 10. thay thế các thay đổi cục bộ
-Trong trường hợp bạn làm sai điều gì đó, bạn có thể thay thế các thay đổi cục bộ bằng lệnh
+# 11. liệt kê các remote url
 ```bash
-git checkout -- <tên-tập-tin>
+git remote -v
 ```
-lệnh này thay thế những thay đổi trong "tree" đang làm việc với nội dung mới nhất của HEAD.
-Các thay đổi đã được thêm vào chỉ mục, kể cả các tập tin mới, điều này sẽ được giữ lại.
-Nếu bạn muốn hủy tất cả thay đổi và commit cục bộ, lấy về (fetch) lịch sử gần đây nhất từ máy chủ và trỏ nhánh master cục bộ vào nó như sau
+# 12. thay đổi origin url
 ```bash
-git fetch origin
-git reset --hard origin/master
+git remote set-url origin *url*
 ```
-# 11. Các gợi ý hữu ích
-git GUI tích hợp sẵn
-```bash
-gitk
-```
-sử dụng kết quả git với nhiều màu
-```bash
-git config color.ui true
-```
-hiện log trên mỗi commit
-```bash
-git config format.pretty oneline
-```
-sử dụng thêm tập tin tương tác
-```bash
-git add -i
-```
+
+
+
+
+
+
+
+
